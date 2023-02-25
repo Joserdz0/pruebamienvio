@@ -3,18 +3,37 @@ PHP 8.2
 COMPOSER
 MYSQL
 
-Paso 1.- Crear la base de datos en mysql con el comando:
-        
-        php artisan db:create
+Paso 1.- cambiar el archivo .env.example por .env
 
-Paso 2.- Migrar las tablas php con el comando:
+
+
+Paso 2.- Instalar dependencias de laravel
+
+        composer install
+
+Paso 3.- Generar clave de aplicacion
+
+        php artisan key:generate
+
+Paso 5.- Modificar el archivo .env por la base de datos como queramos llamar nuestra aplicacion:
+
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=pruebamienvio
+        DB_USERNAME=root
+        DB_PASSWORD=
+
+Paso 5.- Crear la base de datos en mysql con los anteriores
+
+Paso 6.- Migrar las tablas php con el comando:
 
         php artisan migrate
 
-Paso 3.- Migrar datos de prueba del el archivo semilla:
+Paso 7.- Migrar datos de prueba del el archivo semilla:
 
         php artisan db:seed --class=ProductosTableSeeder
 
-Paso 4.- Correr el proyecto 
+Paso 8.- Correr el proyecto 
         
         php artisian serve
