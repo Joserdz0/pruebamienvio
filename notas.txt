@@ -1,0 +1,20 @@
+REQUISITOS:
+PHP 8.2
+COMPOSER
+MYSQL
+
+Paso 1.- Crear la base de datos en mysql con el comando:
+        
+        php artisan db:create
+
+Paso 2.- Migrar las tablas php con el comando:
+
+        php artisan migrate
+
+Paso 3.- Migrar datos de prueba del el archivo semilla:
+
+        php artisan db:seed --class=ProductosTableSeeder
+
+Paso 4.- Correr el proyecto 
+        
+        php artisian serve
